@@ -76,7 +76,7 @@ $(function() {
         //load random feed, after feed loads, load feed before it or if feed id is 0, load last feed
         beforeEach(function(done) {
             var firstFeedID = Math.floor(Math.random()*allFeeds.length);
-            var testFeedID = currentFeedID == 0 ? allFeeds.length - 1 : currentFeedID - 1;
+            var testFeedID = firstFeedID == 0 ? allFeeds.length - 1 : firstFeedID - 1;
 
             loadFeed(firstFeedID, function(){
                 firstFeed = $('.feed').html();
